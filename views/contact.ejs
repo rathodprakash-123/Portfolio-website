@@ -1,0 +1,43 @@
+<%- include('partials/header') %>
+
+<section>
+  <h2>Contact Me</h2>
+  <form action="/contact" method="POST" id="contactForm">
+    <input 
+      name="name" 
+      placeholder="Your Name" 
+      required 
+      pattern="[A-Za-z\s]{3,50}" 
+      title="Name must be 3-50 letters only"
+    />
+    
+    <input 
+      name="email" 
+      type="email" 
+      placeholder="Your Email" 
+      required 
+    />
+
+    <input 
+      name="number" 
+      type="tel" 
+      placeholder="Your Mobile Number" 
+      pattern="[0-9]{10}" 
+      title="Enter a 10-digit mobile number" 
+      required 
+    />
+
+    <textarea 
+      name="message" 
+      placeholder="Your Message" 
+      required 
+      minlength="10"
+      title="Message must be at least 10 characters"
+    ></textarea>
+
+    <button type="submit">Send</button>
+  </form>
+</section>
+
+<%- include('partials/footer') %>
+
