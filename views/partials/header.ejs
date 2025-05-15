@@ -6,19 +6,26 @@
   <title>My Portfolio</title>
   <link rel="icon" href="/images/portfolia website.jpg"/>
   <link rel="stylesheet" href="/css/style.css" />
+  <script>
+  function toggleMenu() {
+    document.getElementById('navLinks').classList.toggle('active');
+  }
+</script>
 </head>
 <body>
-  <header>
-    <nav>
-      <div class="logo">Portfolio</div>
-      <ul class="nav-links">
-        <li><a href="/">Home</a></li>
-        <li><a href="/about">About</a></li>
-        <li><a href="/projects">Projects</a></li>
-        <li><a href="/contact">Contact</a></li>
-        <li><a href="/admin/login">Login</a></li>
-        <li><a href="/admin/dashboard">Dashboard</a></li>
-      </ul>
-    </nav>
-  </header>
+<header>
+  <nav class="navbar">
+    <div class="logo">Portfolio</div>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="/">Home</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/projects">Projects</a></li>
+      <li><a href="/contact">Contact</a></li>
+      <li><a href="/admin/login">Login</a></li>
+      <li><a href="/admin/dashboard">Dashboard</a></li>
+    </ul>
+  </nav>
+</header>
+
   <main>
