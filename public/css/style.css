@@ -372,7 +372,7 @@ form textarea:focus {
 }
 
 form button {
-  background-color: #00bcd4;
+  background-color: #274d90;
   color: white;
   border: none;
   padding: 0.9rem;
@@ -417,6 +417,7 @@ textarea::placeholder {
 }
 footer {
   text-align: center;
-  background: #eee;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  color: #fff;
   padding: 1rem;
 }
