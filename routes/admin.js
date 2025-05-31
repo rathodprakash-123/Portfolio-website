@@ -48,7 +48,6 @@ router.get('/admin/dashboard', async (req, res) => {
   }
 });
 
-
 // Logout
 router.get('/logout', (req, res) => {
   req.session.destroy();
