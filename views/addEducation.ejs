@@ -1,0 +1,27 @@
+<%- include('partials/header') %>
+
+<section>
+  <h2>Add Education</h2>
+  <form action="/admin/add-education" method="post" id="contactForm">
+    <input 
+      name="Education info" 
+      placeholder="Enter Education" 
+      required 
+      title="Name must be 3-50 letters only"
+    />
+    <input 
+      name="school/college name" 
+      type="text" 
+      placeholder="Enter School/College or University name" 
+      required 
+    />
+    <input 
+      name="Result" 
+      type="text" 
+      placeholder="Enter Result in Percentage/Grade/CGPA" 
+    />
+    <button type="submit">Send</button>
+  </form>
+</section>
+
+<%- include('partials/footer') %>

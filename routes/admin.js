@@ -31,23 +31,7 @@ router.post('/login', async (req, res) => {
 router.get('/dashboard', checkAuth, (req, res) => {
   res.render('admin/dashboard'); // UI with edit/delete options
 });
-
-router.get('/admin/dashboard', async (req, res) => {
-  try {
-    // Assuming you have a Project model and fetching from DB
-    const projects = [
-  { title: "Project 1", description: "Description of project 1" },
-  { title: "Project 2", description: "Description of project 2" },
-];
-    const p1 = await projects.finde();
-
-    res.render('admin/dashboard', { projects });
-  } catch (err) {
-    console.error(err);
-    res.status(500).send('Server Error');
-  }
-});
-
+ 
 // Logout
 router.get('/logout', (req, res) => {
   req.session.destroy();

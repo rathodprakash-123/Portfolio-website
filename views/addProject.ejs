@@ -1,0 +1,43 @@
+<%- include('partials/header') %>
+
+<section>
+  <h2>Add New Project</h2>
+  <form action="/admin/add-project" method="post" id="contactForm">
+    <input 
+      name="Project" 
+      placeholder="Enter Project name" 
+      required 
+      title="Name must be 3-50 letters only"
+    />
+    <input 
+      name="Language/app" 
+      type="text" 
+      placeholder="Enter Language" 
+      required 
+    />
+
+    <input 
+      name="image" 
+      type="image" 
+      placeholder="Enter Image" 
+    />
+        <input 
+      name="image" 
+      type="image" 
+      placeholder="Enter image" 
+      required 
+    />
+
+    <textarea 
+      name="Description" 
+      placeholder="Enter project Details" 
+      required 
+      minlength="10"
+      title="Message must be at least 10 characters"
+    ></textarea>
+
+    <button type="submit">Send</button>
+  </form>
+</section>
+
+<%- include('partials/footer') %>

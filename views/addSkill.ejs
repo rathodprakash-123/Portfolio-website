@@ -1,0 +1,24 @@
+<%- include('partials/header') %>
+
+<section>
+  <h2>Add Skills</h2>
+  <form action="/admin/add-skill" method="post" id="contactForm">
+    <input 
+      name="Skills" 
+      placeholder="Enter skill" 
+      required 
+    />
+
+    <textarea 
+      name="Description" 
+      placeholder="Enter project Details" 
+      required 
+      minlength="10"
+      title="Message must be at least 10 characters"
+    ></textarea>
+
+    <button type="submit">Send</button>
+  </form>
+</section>
+
+<%- include('partials/footer') %>
