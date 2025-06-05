@@ -31,6 +31,7 @@ router.post('/login', async (req, res) => {
 router.get('/dashboard', checkAuth, (req, res) => {
   res.render('admin/dashboard'); // UI with edit/delete options
 });
+
  
 // Logout
 router.get('/logout', (req, res) => {

@@ -15,4 +15,21 @@ router.post('/contact', (req, res) => {
   res.redirect('/');
 });
 
+//add project
+router.post("/admin/add-project",(req,res)=>{
+  res.redirect('/admin/dashboard');
+});
+//add skill
+router.post("/admin/add-skill",(req,res)=>{
+  // const skill = req.body.Skills;
+  // const desc = req.body.Description;
+  // res.send(`${skill} for ${desc}`);
+
+  res.redirect('/admin/dashboard');
+});
+
+router.post("/admin/add-education",(req,res)=>{
+  res.redirect('/admin/dashboard');
+});
+
 module.exports = router;
