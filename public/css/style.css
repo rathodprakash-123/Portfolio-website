@@ -178,6 +178,44 @@ main {
   from { opacity: 0; transform: translateX(30px); }
   to { opacity: 1; transform: translateX(0); }
 }
+
+.social-box {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.social-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #f2f2f2;
+  padding: 10px 16px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+}
+.social-item a{
+  text-decoration: none;
+}
+
+.social-item:hover {
+  transform: scale(1.05);
+}
+
+.social-icon {
+  width: 50px;
+  height: 50px;
+}
+
+@media screen and (max-width: 600px) {
+  .social-box {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
 /* General Section Styling */
 section {
   padding: 2rem 1rem;
