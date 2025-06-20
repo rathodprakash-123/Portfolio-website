@@ -21,17 +21,3 @@ app.use('/', routes);
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Server running at http://localhost:${PORT}`));
-
-// admin page
-
-const session = require('express-session');
-
-app.use(session({
-  secret: 'yourSecret',
-  resave: false,
-  saveUninitialized: false,
-}));
-
-// Route registration
-const adminRoutes = require('./routes/admin');
-app.use('/admin', adminRoutes);

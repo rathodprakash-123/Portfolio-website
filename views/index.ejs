@@ -1,5 +1,44 @@
 <%- include('partials/header') %>
+<style>
+.skills-section {
+  padding: 3rem 2rem;
+  background-color: #f3f4f6;
+}
 
+.skills-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.skill-card {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+}
+
+.skill-card h3 {
+  margin: 1rem 0 0.5rem;
+  font-size: 1.2rem;
+  color: #111827;
+}
+
+.skill-card p {
+  font-size: 0.9rem;
+  color: #6b7280;
+  margin-bottom: 1.5rem;
+}
+</style>
 <section class="hero">
   <div class="hero-container">
     <div class="hero-text">
@@ -18,21 +57,90 @@
     </div>
   </div>
 </section>
-<!-- <section class="hero">
-  <div class="social-box">
-    <div class="social-item">
-      <img src="/images/linkden.png" alt="LinkedIn" class="social-icon" />
-      <a href="https://www.linkedin.com/in/prakashrathod" target="_blank"
-        >@prakashrathod</a
-      >
+<section class="skills-section">
+  <h2>Profile</h2>
+  <div class="skills-wrapper">
+  <div class="skill-card">
+    <a href="https://www.linkedin.com/in/rathod-prakash-286ab3261/" 
+      target="_blank" style="text-decoration: none;">
+        <img src="/images/linkden.png" alt="MongoDB" style="width: 60px; height: 60px;" />
+        <h3>linkden</h3>
+        </a>
     </div>
-    <div class="social-item">
-      <img src="/images/github.png" alt="GitHub" class="social-icon" />
-      <a href="https://github.com/prakashrathod" target="_blank"
-        >@prakashrathod</a
-      >
+    <div class="skill-card">
+      <a href="https://github.com/rathodprakash-123" 
+      target="_blank" style="text-decoration: none;">
+        <img src="/images/github.png" alt="MongoDB" style="width: 60px; height: 60px;" />
+      <h3>GitHub</h3>
+      </a>
+    </div>
+</div>
+</section>
+<section class="skills-section">
+  <h2>Development</h2>
+  <div class="skills-wrapper">
+    <div class="skill-card">
+        <img src="/images/mongo.png" alt="MongoDB" style="width: 60px; height: 60px;" />
+      
+      <h3>MongoDB</h3>
+      <p>Markup language for structuring content.</p>
+    </div>
+    <div class="skill-card">
+      
+        <img src="/images/javaScipt.png" alt="JavaScript" style="width: 50px; height: 50px;" />
+      
+      <h3 style="margin-top: 25px;">JavaScript</h3>
+      <p>Language for dynamic interactivity and logic.</p>
+    </div>
+    <div class="skill-card">
+
+        <img src="/images/react.webp" alt="react" style="width: 70px; height: 70px;" />
+      <h3>React</h3>
+      <p>Styling language for web pages and components.</p>
+    </div>
+
+    <div class="skill-card">
+        <img src="/images/node.png" alt="Node.js" style="width: 70px; height: 70px;" />
+      <h3>Node.js</h3>
+      <p>Backend runtime environment for JS apps.</p>
     </div>
   </div>
-</section> -->
+</section>
+<section class="skills-section">
+    <h2>Programming</h2>
+    <div class="skills-wrapper">
+      <div class="skill-card">
+        <img src="/images/c.png" alt="C language" style="width: 70px; height: 70px;" />
+      <h3>C Language</h3>
+      <p>Data Stucture and Algorithm</p>
+      </div>
+      <div class="skill-card">
+        <img src="/images/java.webp" alt="C language" style="width: 70px; height: 70px;" />
+      <h3>Java</h3>
+      <p>Advance Java and and Object Oriented Programming</p>
+      </div>
+      <div class="skill-card">
+        <img src="/images/phython.png" alt="C language" style="width: 60px; height: 60px;" />
+      <h3>Python</h3>
+      <p>Build logic and problem-solving Data Science</p>
+      </div>
+    </div>
+</section>
+<section class="skills-section">
+    <h2>Graphic Design</h2>
+    <div class="skills-wrapper">
+      <div class="skill-card">
+        <img src="/images/canva.png" alt="C language" style="width: 70px; height: 70px;" />
+      <h3>Canva</h3>
+      <p>Using Canva's tools to create various visual content to understanding design principles like color theory, typography, and layout</p>
+      </div>
+      <div class="skill-card">
+        <img src="/images/figmaapp.png" alt="C language" style="width: 70px; height: 70px;" />
+      <h3>Figma</h3>
+      <p>UI design, interaction design, prototyping, design systems, and the ability to collaborate effectively with other team members</p>
+      </div>
+    </div>
+</section>
+
 
 <%- include('partials/footer') %>
