@@ -90,7 +90,7 @@ nav {
 
 main {
   flex: 1;
-  padding: 2rem;
+  padding: 1rem;
 }
 
 .hero-container {
@@ -107,7 +107,7 @@ main {
 
 .hero-text {
   flex: 1;
-  min-width: 280px;
+  min-width: 250px;
   animation: fadeInLeft 1s ease forwards;
 }
 
@@ -129,7 +129,7 @@ main {
 .hero-text p {
   font-size: 1.1rem;
   line-height: 1.6;
-  max-width: 600px;
+  max-width: 580px;
   color: #555;
 }
 
@@ -153,6 +153,7 @@ main {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    padding: 0.2rem;
   }
   .hero-text h1 {
     font-size: 1rem;
@@ -219,7 +220,7 @@ main {
 /* General Section Styling */
 section {
   padding: 2rem 1rem;
-  max-width: 900px;
+  max-width: 1000px;
   margin: auto;
   font-family: Arial, sans-serif;
 }
@@ -427,12 +428,12 @@ form button:hover {
 /* Styling for error and validation feedback */
 input:invalid,
 textarea:invalid {
-  border-color: #ff4d4d;
+  border-color:  #12670c;
 }
 
 input:valid,
 textarea:valid {
-  border-color: #00bcd4;
+  border-color: #12670c;
 }
 
 /* Placeholder Styling */
