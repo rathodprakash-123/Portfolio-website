@@ -351,20 +351,6 @@ section p {
   color: #444;
   font-size: 0.95rem;
 }
-
-/* Experience Section */
-.experience-box {
-  background-color: #f3f3f3;
-  padding: 1rem 1.5rem;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-  color: #333;
-}
-
-.experience-box p {
-  margin: 0.4rem 0;
-}
-
 /* Responsive Adjustments */
 @media (max-width: 768px) {
   .skills-container {
@@ -408,7 +394,7 @@ form textarea {
 
 form input:focus,
 form textarea:focus {
-  border-color: #00bcd4;
+  /* border-color: #00bcd4; */
   outline: none;
   background-color: #fff;
 }
@@ -425,7 +411,7 @@ form button {
 }
 
 form button:hover {
-  background-color: #0097a7;
+  background-color: #0d6623;
 }
 
 /* Styling for error and validation feedback */

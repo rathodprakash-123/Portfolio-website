@@ -1,107 +1,145 @@
 <%- include('partials/header') %>
+<style>
+  .projects-section {
+  padding: 3rem 1.5rem;
+  background-color: #f9fafb;
+  max-width:1400px ;
+}
 
-<section>
+.section-title {
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: #222;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+.project-card {
+  background: white;
+  border-radius: 18px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.project-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.project-body {
+  padding: 1.2rem;
+  border-radius: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.project-body h3 {
+  margin: 0;
+  font-size: 1.3rem;
+  color: #111827;
+}
+
+.project-body p {
+  font-size: 0.95rem;
+  color: #4b5563;
+}
+
+.project-actions {
+  display: flex;
+  justify-content: center;
+  background-color: transparent;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 0.95rem;
+  color: white;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn.code {
+  background-color: #24292e;
+}
+
+.btn.code:hover {
+  background-color: #444c56;
+}
+
+.btn.demo {
+  background-color: #2563eb;
+}
+
+.btn.demo:hover {
+  background-color: #1e40af;
+}
+
+</style>
+
+<section class="projects-section">
   <h2>My Projects</h2>
 
-  <!-- Project1 -->
+  <div class="card-grid">
+    <% const projects = [
+      {
+        title: "Smart Village Portal",
+        img: "/images/smart-village.png",
+        desc: "A web platform for village communities to access announcements, lodge complaints & view local vlogs. Built with Node.js, Express, EJS, and MongoDB.",
+        code: "https://github.com/rathodprakash-123/Smart-village",
+        demo: "https://smart-village-zog0.onrender.com"
+      },
+      {
+        title: "Weather App",
+        img: "/images/whether2.png",
+        desc: "A dynamic weather app using Node.js, Express.js, and OpenWeatherMap API to show live weather, humidity, and wind data.",
+        code: "https://github.com/rathodprakash-123/whether-system",
+        demo: "https://whether-system.onrender.com"
+      },
+      {
+        title: "Airbnb Clone",
+        img: "/images/airnb2.png",
+        desc: "A full-stack Airbnb-inspired app using Node.js, Express, MongoDB, and Tailwind. Explore, list, and manage rental properties.",
+        code: "https://github.com/rathodprakash-123/Airnb-clone",
+        demo: "https://airnb-clone-hf1s.onrender.com"
+      }
+    ]; %>
 
-  <div class="class="skills-container"">
-    <h4>Simon Game</h4>
-   <a href="https://github.com/rathodprakash-123/Simon-Game" 
-      target="_blank" style="text-decoration: none;">
-      <img  src="/images/simon-start.png" 
-            alt="simon game" 
-            class="profile-photo" 
-            style="margin-top: 8px;">
-   </a>
-    <a href="https://github.com/rathodprakash-123/Simon-Game" 
-        target="_blank"style="text-decoration: none;">
-        <img  src="/images/simon-end.png" 
-              alt="simon game" 
-              class="profile-photo" 
-              style="margin: 8px 0px 0px 5px;">
-    </a>
-    <p class="skill-category">The Simon Game is a classic memory-based game built using HTML, CSS, and JavaScript. The game challenges players to recall and replicate an increasingly complex sequence of button flashes. Each correct sequence takes the player to a higher level, and the game continues until a mistake is made.</p>
+    <% projects.forEach(project => { %>
+      <div class="project-card">
+        <img src="<%= project.img %>" alt="<%= project.title %>" class="project-image" />
+        <div class="project-body">
+          <h3><%= project.title %></h3>
+          <p><%= project.desc %></p>
+          <div class="project-actions">
+            <a href="<%= project.code %>" target="_blank" class="btn code"><i class="fa-solid fa-code"></i>&nbsp;View Code</a>
+            <% if (project.demo) { %>
+              <a href="<%= project.demo %>" target="_blank" class="btn demo"><i class="fa-solid fa-laptop-code"></i>&nbsp;Live Demo</a>
+            <% } %>
+          </div>
+        </div>
+      </div>
+    <% }) %>
   </div>
-
-   <!-- Project2 -->
-
-  <div class="class="skills-container"">
-    <h4>Whether-app</h4>
-    <a  href="https://github.com/rathodprakash-123/whether-system" 
-        target="_blank" 
-        style="text-decoration: none;">
-        <img  src="/images/whether2.png" 
-              alt="whether-system" 
-              class="profile-photo" 
-              style="margin-top: 8px;"></a>
-    <a  href="https://github.com/rathodprakash-123/whether-system" 
-        target="_blank"
-        style="text-decoration: none;">
-        <img  src="/images/whether1.png" 
-              alt="whether-system" 
-              class="profile-photo" 
-              style="margin: 8px 0px 0px 5px;"></a>
-      <br>
-    <button 
-      style="padding: 10px 20px;
-          margin: 15px 0px 15px 0px;
-          font-weight: 355;
-          font-size: medium;
-          width: auto;
-          height: auto;
-          background-color: #1d6331;
-          color: white;
-          border: none;
-          border-radius: 10px; 
-          ">
-      <a  href="https://whether-system.onrender.com" 
-          target="_blank"
-          style="text-decoration: none;color: #f9fafa;font-size: medium;">
-                Live On</a>
-    </button>
-   
-   <p class="skill-category">The Weather App is a dynamic web application that allows users to search for real-time weather information for any city around the world. It is built using Node.js, Express.js, and EJS templating, with weather data fetched from the OpenWeatherMap API.Users simply enter a city name, and the app displays the current temperature, weather conditions, humidity, wind speed, and the local time of that location.</p>
-  </div>
-
- <!-- Project3 -->
-    <div class="class="skills-container"">
-    <h4>Airnb Clone</h4>
-    <a  href="https://github.com/rathodprakash-123/Airnb-clone" 
-        target="_blank" 
-        style="text-decoration: none;">
-        <img  src="/images/airnb.png" 
-              alt="airnb" 
-              class="profile-photo" 
-              style="margin-top: 8px;"></a>
-      <a  href="https://github.com/rathodprakash-123/Airnb-clone" 
-        target="_blank"
-        style="text-decoration: none;">
-        <img  src="/images/airnb2.png" 
-              alt="whether-system" 
-              class="profile-photo" 
-              style="margin: 8px 0px 0px 5px;"></a>
-      <br>
-    <button 
-      style="padding: 10px 20px;
-          margin: 15px 0px 15px 0px;
-          font-weight: 355;
-          font-size: medium;
-          width: auto;
-          height: auto;
-          background-color: #be0a0a;
-          color: white;
-          border: none;
-          border-radius: 10px; 
-          ">
-      <a  href="https://airnb-clone-hf1s.onrender.com" 
-          target="_blank"
-          style="text-decoration: none;color: #f9fafa;font-size: medium;">
-                Live On</a>
-    </button>
-   
-   <p class="skill-category">This is a full-stack Airbnb-inspired web application built using Node.js, Express, MongoDB, EJS, and Bootstrap/Tailwind. It allows users to explore, list, and manage rental properties, simulating core functionalities of Airbnb.</p>
-  </div>
-
 </section>
+
 <%- include('partials/footer') %>

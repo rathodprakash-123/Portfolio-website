@@ -1,73 +1,124 @@
 <%- include('partials/header') %>
-<section>
-  <h2>Education Info</h2>
-  <!-- <p>I'm Graphic Designer & Full Stack developer</p>
-  <hr>
-   <h4>Education Info</h4> -->
-  <div>
-    <h5>SSC (2020)</h5>
-    <p>Adarsh Nivasi Shala -Junagadh</p>
-    <p>Result: <b>84.33%</b></p>
-  </div>
-  <div>
-    <h5>HSC(Science) (2022)</h5>
-    <p>Alpha High School-Junagadh</p>
-    <p>Result: <b>79.54%</b></p>
-  </div>
-  <div>
-    <h5>Bachelor of Engineering(2022-2026)</h5>
-    <p>Computer Engineering</p>
-    <p>L. D. College Of Engineering - Ahmedabad</p>
-    <p>Result: <b>8.04 CGPA</b></p>
-  </div>
- <!-- <h4>Skills</h4>
+<style>
+  .section-container {
+  padding: 3rem 1.5rem;
+  background-color: #f9f9f9;
+  max-width: 1200px;
+  font-family: 'Segoe UI', sans-serif;
+}
 
-  <div class="skills-container">
-    <div class="skill-category">
-      <h5>Coding Skills</h5>
-      <ul>
-        <li>DSA</li>
-        <li>Java</li>
-        <li>Python</li>
-        <li>C Language</li>
-        <li>Front-End Development</li>
-        <li>Back-End Development</li>
-      </ul>
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #222;
+  border-left: 4px solid #1a1b65;
+  padding-left: 10px;
+}
+
+.info-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.info-card {
+  background-color: #fff;
+  border-left: 6px solid #045d28;
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.info-card h4 {
+  margin-bottom: 0.5rem;
+  color: #111827;
+}
+
+.highlight {
+  color: #055c22;
+  font-weight: bold;
+}
+
+.achievement-box {
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  margin-bottom: 2rem;
+}
+
+.certificate-img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+  margin: 1rem 0;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.achievement-list {
+  list-style-type: circle;
+  padding-left: 1.5rem;
+  color: #374151;
+  line-height: 1.7;
+}
+
+.experience-box {
+  background-color: #fff;
+  padding: 1.2rem 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+</style>
+
+<section class="section-container">
+
+  <!-- 📘 Education -->
+  <h2 class="section-title"><i class="fa-solid fa-graduation-cap"></i>&nbsp;Education</h2>
+  <div class="info-cards">
+    <div class="info-card">
+      <h4>SSC (2020)</h4>
+      <p><strong>School:</strong> Adarsh Nivasi Shala, Junagadh</p>
+      <p><strong>Result:</strong> <span class="highlight">84.33%</span></p>
     </div>
-
-    <div class="skill-category">
-      <h5>Graphic Design Skills</h5>
-      <ul id="design">
-        <li>Canva</li>
-        <li>Figma</li>
-        <li>Typography</li>
-        <li>Color Theory</li>
-        <li>Adobe Express</li>
-        <li>Video Editing</li>
-      </ul>
+    <div class="info-card">
+      <h4>HSC (Science) (2022)</h4>
+      <p><strong>School:</strong> Alpha High School, Junagadh</p>
+      <p><strong>Result:</strong> <span class="highlight">79.54%</span></p>
+    </div>
+    <div class="info-card">
+      <h4>Bachelor of Engineering (2022–2026)</h4>
+      <p><strong>Branch:</strong> Computer Engineering</p>
+      <p><strong>Institute:</strong> L.D. College of Engineering, Ahmedabad</p>
+      <p><strong>CGPA:</strong> <span class="highlight">8.04</span></p>
     </div>
   </div>
 
-  <hr>
-  <h4>Achievement</h4>
-    <div class="experience-box">
-      <h5>Achieved Graphic Design Certificate</h5>
-      <img src="/images/pro.png" alt="graphic_desisn_certificate" width="550px" height="320px" style="border-radius: 10px;">
-      <div class=""skill-category"">
-        <ul type="circle">
-          <li>Successfully completed a certified Graphic Design course, gaining proficiency in key design principles, typography, color theory, branding, layout techniques, and industry-standard tools such as Adobe Express, Canva and InDesign.</li>
-          <br>
-          <li>Developed a strong foundation in visual communication, creative problem-solving, and delivering design solutions for both digital and print media. Demonstrated skills through hands-on projects and portfolio development.</li>
-        </ul>
-      </div>
+  <!-- 🏅 Achievement -->
+  <h2 class="section-title"><i class="fa-solid fa-award"></i> &nbsp;Achievement</h2>
+  <div class="achievement-box">
+    <h4>Graphic Design Certificate</h4>
+    <img src="/images/pro.png" alt="Graphic Design Certificate" class="certificate-img">
+    <ul class="achievement-list">
+      <li>Completed certified Graphic Design course: typography, branding, layout, and Adobe Express, Canva, InDesign.</li>
+      <li>Hands-on projects focused on creative problem-solving and visual communication for digital & print media.</li>
+    </ul>
   </div>
-  <hr>
-  <h4>Experience</h4>
+
+  <!-- 💼 Experience -->
+  <h2 class="section-title"><i class="fa-solid fa-envelope-circle-check"></i>&nbsp;Experience</h2>
   <div class="experience-box">
     <p><strong>Role:</strong> Graphic Designer</p>
-    <p>I work as a Graphic Designer for the LDCE Social Media Team</p>
-    <p><strong>Year:</strong> February 2024 – May 2025</p>
-  </div> -->
+    <p><strong>Team:</strong> LDCE Social Media Team</p>
+    <p><strong>Duration:</strong> February 2024 – May 2025</p>
+  </div>
+  <div class="experience-box">
+    <p><strong>Role:</strong>Intern</p>
+    <p><strong>Team:</strong>Tatvasoft-Internship</p>
+    <p><strong>Duration:</strong>15 Days</p>
+  </div>
 
 </section>
+
 <%- include('partials/footer') %>
