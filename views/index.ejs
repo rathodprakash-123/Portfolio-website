@@ -27,6 +27,39 @@
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+.project-actions {
+  display: flex;
+  justify-content: center;
+  background-color: transparent;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.btn {
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 0.95rem;
+  color: white;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn.code {
+  background-color: #24292e;
+}
+
+.btn.code:hover {
+  background-color: #444c56;
+}
+
+.btn.demo {
+  background-color: #173472;
+}
+
+.btn.demo:hover {
+  background-color: #1e40af;
+}
 
 .skill-card:hover {
   transform: translateY(-5px);
@@ -57,6 +90,10 @@
       <p>
         I'm a graphic designer, web developer, and athlete with a passion for
         creativity, technology, and fitness.
+        <br>
+        <br>
+            <a href="https://github.com/rathodprakash-123" target="_blank" class="btn code"><i class="fa-brands fa-github"></i>&nbsp;Github</a>
+            <a href="https://www.linkedin.com/in/rathod-prakash-286ab3261/" target="_blank" class="btn demo"><i class="fa-brands fa-linkedin-in"></i>&nbsp;Linkden</a>
       </p>
     </div>
     <div class="hero-image">
@@ -68,25 +105,7 @@
     </div>
   </div>
 </section>
-<section class="skills-section">
-  <h2 class="header">Profile</h2>
-  <div class="skills-wrapper">
-  <div class="skill-card">
-    <a href="https://www.linkedin.com/in/rathod-prakash-286ab3261/" 
-      target="_blank" style="text-decoration: none;">
-        <img src="/images/linkden.png" alt="MongoDB" style="width: 60px; height: 60px;" />
-        <h3>linkden</h3>
-        </a>
-    </div>
-    <div class="skill-card">
-      <a href="https://github.com/rathodprakash-123" 
-      target="_blank" style="text-decoration: none;">
-        <img src="/images/github.png" alt="MongoDB" style="width: 60px; height: 60px;" />
-      <h3>GitHub</h3>
-      </a>
-    </div>
-</div>
-</section>
+
 <section class="projects-section">
   <h2 class="header">Development</h2>
   <div class="skills-wrapper">
