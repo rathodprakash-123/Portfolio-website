@@ -35,9 +35,15 @@
       title="Message must be at least 10 characters"
     ></textarea>
 
-    <button type="submit">Send</button>
+    <button type="submit" id="submit">Send</button>
+
   </form>
 </section>
-
+<script>
+  const btn = document.getElementById('submit');
+  btn.addEventListener("click",function(){
+    alert("Your response send Succesfully");
+  });
+</script>
 
 <%- include('partials/footer') %>
