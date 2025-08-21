@@ -5,6 +5,7 @@ const Message = require("../models/message")
 router.get('/', (req, res) => res.render('index'));
 router.get('/about', (req, res) => res.render('about'));
 router.get('/projects', (req, res) => res.render('projects'));
+router.get('/designs', (req, res) => res.render('design'));
 router.get('/contact', (req, res) => res.render('contact'));
 router.post('/contact', async (req, res) => {
   const { name, email,number ,message } = req.body;

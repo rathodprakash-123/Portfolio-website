@@ -1,0 +1,97 @@
+<%- include('partials/header') %>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+<style>
+    /* Posters Section */
+.poster-section {
+  padding: 3rem 1.5rem;
+  background-color: #f9fafb;
+  font-family: 'Poppins';
+  max-width:1400px ;
+}
+
+.poster-title {
+  font-size: 2rem;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+img{
+  border-radius: 10px;
+}
+
+
+
+/* Grid Layout */
+.poster-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.poster-card {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.poster-card:hover {
+  transform: scale(1.05);
+}
+
+.poster-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+</style>
+<section class="poster-section">
+  <h5 class="poster-title">A collection of my creative poster works.</h5>
+  <div class="poster-grid">
+    <div class="poster-card">
+      <img src="images/Graphic1.png" alt="Poster 1">
+    </div>
+
+    <div class="poster-card">
+      <img src="images/Graphic2.png" alt="Poster 2">
+    </div>
+
+    <div class="poster-card">
+      <img src="images/Graphic3.png" alt="Poster 3">
+    </div>
+
+    <div class="poster-card">
+      <img src="images/Graphic4.png" alt="Poster 5">
+    </div>
+  </div>
+
+  <div class="poster-grid">
+    <div class="poster-card">
+      <img src="images/p1.png" alt="Poster 6">
+    </div>
+    <div class="poster-card">
+      <img src="images/p2.png" alt="Poster 7">
+    </div>
+    <div class="poster-card">
+      <img src="images/p3.png" alt="Poster 8">
+    </div>
+    <div class="poster-card">
+      <img src="images/p4.png" alt="Poster 9">
+    </div>        
+  </div>
+
+  <div class="poster-grid">
+    <div class="poster-card">
+      <img src="images/Graphic6.png" alt="Poster 10">
+    </div>
+  </div>
+</section>
+<%- include('partials/footer') %>
