@@ -10,7 +10,8 @@ html, body {
 }
 
 header {
-  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  /* background: linear-gradient(135deg, #1e3c72, #2a5298); */
+  background: linear-gradient(180deg, rgba(0, 47, 90, 0.9), rgba(49, 102, 187, 0.6));
   color: #fff;
   padding: 1rem 2rem;
   position: sticky;
@@ -406,7 +407,8 @@ textarea::placeholder {
 }
 footer {
   text-align: center;
-  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  /* background: linear-gradient(135deg, #1e3c72, #2a5298); */
+  background: linear-gradient(360deg, rgba(0, 47, 90, 0.9), rgba(49, 102, 187, 0.6));
   color: #fff;
   padding: 1rem;
 }

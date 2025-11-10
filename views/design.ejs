@@ -3,106 +3,300 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 <style>
-    /* Posters Section */
-.poster-section {
-  padding: 3rem 1.5rem;
-  background-color: #f9fafb;
-  font-family: 'Poppins';
-  max-width:1400px ;
+  .design-section {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  padding: 4rem 6rem;
+  /* background: linear-gradient(135deg, #0d4d2b 0%, #0e7a4b 100%); */
+  min-height: 100vh;
+  max-width: 100vw;
+  font-family: 'Poppins', sans-serif;
 }
 
-.poster-title {
-  font-size: 2rem;
-  font-weight: 400;
-  margin-bottom: 0.5rem;
-  text-align: center;
-}
-
-img{
-  border-radius: 10px;
-}
-
-
-
-/* Grid Layout */
-.poster-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  justify-content: center;
-  align-items: center;
-}
-
-.poster-card {
-  background: #fff;
-  border-radius: 10px;
+/* Each vertical container (like a card) */
+.vertical-container {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  background: #ffffff10;
+  border-radius: 16px;
+  min-width:40vw ;
   overflow: hidden;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease;
+  box-shadow: 0 10px 40px rgba(75, 75, 75, 0.2);
+  backdrop-filter: blur(12px);
 }
 
-.poster-card:hover {
-  transform: scale(1.05);
+/* Left side text section */
+.vertical-content {
+  flex: 1;
+  padding: 4rem 3rem;
+  color: white;
+  position: relative;
+  background: linear-gradient(160deg, rgba(0, 47, 90, 0.8), rgba(49, 102, 187, 0.6));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.poster-card img {
+
+/* Decorative large background number */
+.design-line::after {
+  content: attr(data-number);
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  font-size: 10rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.05);
+  z-index: 0;
+}
+
+
+.vertical-content h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #e2e2e2;
+  margin-bottom: 1.2rem;
+  z-index: 1;
+  position: relative;
+}
+
+.vertical-content p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  max-width: 85%;
+  color: #bdbcbc;
+  opacity: 0.9;
+  z-index: 1;
+  position: relative;
+}
+
+.vertical-content button,
+.vertical-content .know-more-btn {
+  margin-top: 2rem;
+  padding: 0.8rem 1.6rem;
+  border: 2px solid #fff;
+  background: transparent;
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  z-index: 1;
+}
+
+.vertical-content button:hover,
+.vertical-content .know-more-btn:hover {
+  background: white;
+  color: #496dab;
+}
+
+/* Right side image section */
+.vertical-image-wrapper {
+  flex: 1.4;
+  position: relative;
+  overflow: hidden;
+}
+
+.design-image {
   width: 100%;
-  height: auto;
-  display: block;
+  height: 100%;
   object-fit: cover;
+  transition: opacity 0.5s ease;
 }
 
+/* Fade animation */
+.fade-in {
+  opacity: 1;
+}
+
+.fade-out {
+  opacity: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+  .vertical-container {
+    flex-direction: column;
+  }
+
+  .vertical-content {
+    padding: 2rem;
+    text-align: center;
+  }
+
+  .vertical-content p {
+    max-width: 100%;
+  }
+
+  .design-line::after {
+    font-size: 6rem;
+    top: 5%;
+    left: 5%;
+  }
+}
+
+/* 📱 Mobile Devices (max-width: 768px) */
+@media (max-width: 768px) {
+  .design-section {
+    padding: 2rem 1.2rem;
+    gap: 3rem;
+  }
+
+  .vertical-container {
+    flex-direction: column;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+  }
+
+  /* Left content becomes full width */
+  .vertical-content {
+    padding: 2rem 1.5rem;
+    text-align: center;
+    background: linear-gradient(180deg, rgba(0, 47, 90, 0.9), rgba(49, 102, 187, 0.6));
+    align-items: center;
+  }
+
+  .vertical-content h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .vertical-content p {
+    font-size: 1rem;
+    line-height: 1.5;
+    max-width: 100%;
+  }
+
+  .vertical-content .know-more-btn {
+    margin-top: 1.5rem;
+    font-size: 0.85rem;
+    padding: 0.7rem 1.4rem;
+  }
+
+  /* Big background number scales down */
+  .design-line::after {
+    font-size: 5rem;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  /* Image section moves below content */
+  .vertical-image-wrapper {
+    width: 100%;
+    height: 250px;
+  }
+
+  .design-image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+/* 📱 Extra small screens (max-width: 480px) */
+@media (max-width: 480px) {
+  .design-section {
+    padding: 1rem 0.5rem;
+    gap: 1rem;
+  }
+
+  .vertical-content h2 {
+    font-size: 1rem;
+  }
+
+  .vertical-content p {
+    font-size: 0.9rem;
+  }
+
+  .vertical-content .know-more-btn {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.8rem;
+  }
+
+  .design-line::after {
+    font-size: 4rem;
+    top: 8%;
+  }
+
+  .vertical-image-wrapper {
+    height: 200px;
+  }
+}
 </style>
-<section class="poster-section">
-  <h5 class="poster-title">Collection of my creative poster works.</h5>
-  <div class="poster-grid">
-    <div class="poster-card">
-      <img src="images/Graphic1.png" alt="Poster 1">
-    </div>
+<section class="design-section">
+  <% const sections = [
+    {
+      title: "Creative Posters",
+      desc: "Visually engaging posters crafted with bold layouts, color balance, and type composition — each design communicates energy and emotion.",
+      images: ["images/Graphic1.png", "images/Graphic2.png", "images/Graphic3.png", "images/Graphic4.png"]
+    },
+    {
+      title: "Digital Art & Illustrations",
+      desc: "A fusion of digital art and visual storytelling — showcasing mood, creativity, and aesthetics through minimal and expressive artworks.",
+      images: ["images/p1.png", "images/p2.png", "images/p3.png", "images/p4.png"]
+    },
+    {
+      title: "Graphic Explorations",
+      desc: "A mix of abstract visuals, gradients, and experimental forms, reflecting a blend of modern graphic design and conceptual thinking.",
+      images: ["images/Graphic6.png", "images/Graphic7.png", "images/Graphic8.png", "images/Graphic9.png"]
+    },
+    {
+      title: "UI/UX Mockups",
+      desc: "Clean and thoughtful user interface layouts built to enhance user engagement, blending functionality with creativity.",
+      images: ["images/UI-UX.png"]
+    },
+    {
+      title: "Button & Icon Sets",
+      desc: "A collection of modern UI components featuring responsive toggle buttons and intuitive icons designed with a focus on usability, micro-interactions, and accessibility. Each element blends aesthetic minimalism with functional clarity, ensuring smooth transitions, visual feedback, and consistent user experience across all devices.",
+      images: ["images/btn1.png", "images/btn2.png"]
+    }
+  ]; %>
 
-    <div class="poster-card">
-      <img src="images/Graphic2.png" alt="Poster 2">
-    </div>
+  <% sections.forEach((set, idx) => { %>
+    <div class="vertical-container">
+      <!-- Left Content -->
+      <div class="vertical-content">
+        <h1 class="design-line" data-number="0<%= idx + 1 %>"></h1>
+        <h2><%= set.title %></h2>
+        <p><%= set.desc %></p>
+        <!-- <button class="know-more-btn">Know More</button> -->
+      </div>
 
-    <div class="poster-card">
-      <img src="images/Graphic3.png" alt="Poster 3">
+      <!-- Right Image Section -->
+      <div class="vertical-image-wrapper">
+        <img
+          src="<%= set.images[0] %>"
+          alt="<%= set.title %>"
+          class="design-image fade-in"
+          data-images='<%- JSON.stringify(set.images) %>'
+        />
+      </div>
     </div>
-
-    <div class="poster-card">
-      <img src="images/Graphic4.png" alt="Poster 5">
-    </div>
-  </div>
-
-  <div class="poster-grid">
-    <div class="poster-card">
-      <img src="images/p1.png" alt="Poster 6">
-    </div>
-    <div class="poster-card">
-      <img src="images/p2.png" alt="Poster 7">
-    </div>
-    <div class="poster-card">
-      <img src="images/p3.png" alt="Poster 8">
-    </div>
-    <div class="poster-card">
-      <img src="images/p4.png" alt="Poster 9">
-    </div>        
-  </div>
-<h5 class="poster-title">Collection of my UI/UX </h5>
-  <div class="poster-grid">
-    <div class="poster-card">
-      <img src="images/Graphic6.png" alt="Poster 10">
-    </div>
-    <div class="poster-card">
-      <img src="images/Graphic7.png" alt="Poster 11">
-    </div>
-  </div>
-  <div class="poster-grid">
-    <div class="poster-card">
-      <img src="images/Graphic8.png" alt="Poster 12">
-    </div>
-    <div class="poster-card">
-      <img src="images/Graphic9.png" alt="Poster 13">
-    </div>
-  </div>
+  <% }); %>
 </section>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const containers = document.querySelectorAll(".vertical-image-wrapper img");
+    containers.forEach((img) => {
+      const images = JSON.parse(img.dataset.images);
+      let index = 0;
+      setInterval(() => {
+        img.classList.remove("fade-in");
+        img.classList.add("fade-out");
+        setTimeout(() => {
+          index = (index + 1) % images.length;
+          img.src = images[index];
+          img.classList.remove("fade-out");
+          img.classList.add("fade-in");
+        }, 400);
+      }, 3500);
+    });
+  });
+</script>
+
 <%- include('partials/footer') %>
